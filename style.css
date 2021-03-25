@@ -1,0 +1,105 @@
+:root {
+    --main-grey: #8a959b;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--main-grey);
+    background-color: var(--main-grey);
+}
+.container {
+    padding: 0;
+    margin: 20px;
+    display: block;
+}
+h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 39pt;
+}
+h2 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 30pt;
+}
+.box {
+    display: block;
+    margin-left: auto;
+    width: 26mm;
+    height: 3mm;
+    background-color: var(--main-grey);
+    margin: 14mm 0 3mm 0;
+}
+section {
+    font-size: 21pt;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    display: flex;
+    flex-wrap: wrap;
+}
+input {
+    border:none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 21pt;
+    font-family: 'Open Sans', sans-serif;
+}
+.funkce {
+    display: block;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--main-grey);
+}
+.jmeno {
+    font-weight: 700;
+    color: black;
+}
+
+*:focus {
+    outline: none;
+}
+.tisk {
+    visibility: visible;
+    padding: 13mm 17mm 13mm 17mm;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 210mm;
+    height: 296mm;
+    box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    align-items: flex-start;
+}
+footer {
+    display: block;
+    margin-top: auto;
+    width: 46mm;
+    height: 12mm;
+    background: no-repeat url("logo.svg");
+}
+.ovladac {
+    justify-self: flex-end;
+}
+@media print {
+    body, .paper, .container, .ovladani {
+        visibility: hidden;
+        float: none;
+    }
+    .tisk {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact; /* zajistí tisk barev i grafiky pozadí */
+    }
+    @page {
+        size:  auto;   /* auto is the initial value */
+        margin: 0mm;  /* this affects the margin in the printer settings */
+    }
+}
