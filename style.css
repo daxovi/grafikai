@@ -26,6 +26,7 @@ h2 {
 }
 .box {
     display: block;
+    position: relative;
     margin-left: auto;
     width: 26mm;
     height: 3mm;
@@ -46,6 +47,7 @@ input {
     padding: 0;
     margin: 0;
     font-size: 21pt;
+    width: 100%;
     font-family: 'Open Sans', sans-serif;
 }
 .funkce {
@@ -84,11 +86,20 @@ footer {
     background: no-repeat url("logo.svg");
 }
 .ovladac {
-    display: inline-block;
-    padding-right: 0;
+    font-size: 9pt;
+    display: block;
+    position: absolute;
+    padding-top: 3mm;
+    right: 17mm;
+}
+.ovladac a {
+    color: blueviolet;
+    border-bottom: 1px dotted; 
+    text-decoration: none;
+    margin-left: 5mm;
 }
 @media print {
-    body, .paper, .container, .ovladani {
+    body, .paper, .container, .ovladac {
         visibility: hidden;
         float: none;
     }
