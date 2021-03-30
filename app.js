@@ -60,6 +60,10 @@ function AddController(text) {
     controlBtn.innerText = text;
     controlBtn.href = "#";
 
+    if (text.includes("-")) {
+        controlBtn.style.color = "red";
+    }
+
     controller.appendChild(controlBtn);
 
     return controller;
